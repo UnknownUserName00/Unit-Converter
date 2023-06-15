@@ -1,0 +1,2073 @@
+<! DOCTYPE html>
+<html>
+<head>
+<title>Browser Converter</title>
+<!-- Auto Scaling Web Page for Different Screen Sizes -->
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1"/>
+<style>
+form {
+    white-space: pre;
+}
+
+noscript {
+    color: OrangeRed;
+}
+
+input[type ~= "text"] {
+    text-align: center;
+}
+
+body {
+    display: grid;
+}
+
+input[type = "text"] {
+        background-color: SkyBlue;
+        border-style: solid;
+        border-color: Black;
+        // border-width: thin;
+        color: Black;
+        // text-shadow: 5px 5px 5px Indigo;
+        // box-shadow: 5px 5px 5px Indigo;
+        font-weight: Bold;
+}
+
+    select, input[type = "button"], input[type = "reset"] {
+        background-color: Orange;
+        border-style: solid;
+        border-color: Black;
+        // border-width: thin;
+        color: Black;
+        // text-shadow: 5px 5px 5px Indigo;
+        // box-shadow: 5px 5px 5px Maroon;
+        font-weight: Bold;
+    }
+</style>
+
+<script type = "text/JavaScript">
+// Note:
+// document.getElementById("").value = HTML Tag Input
+// document.getElementById("").value = for All HTML Tag except HTML Tag Input
+
+function ConvertLength()
+{
+    lengthValue1 = document.getElementById("lengthConvertFrom").value;
+    lengthValue2 = document.getElementById("lengthConvertTo").value;
+    lengthValue3 = parseFloat(document.getElementById("lengthValue1").value);
+
+    switch (lengthValue1)
+    {
+        // Open Statement For Conversion of Kilometer
+        case "kilometer":
+            switch (lengthValue2)
+            {
+                case "kilometer":
+                    resultLength = lengthValue3 * 1;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "hektometer":
+                    resultLength = lengthValue3 * 10;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "dekameter":
+                    resultLength = lengthValue3 * 100;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "meter":
+                    resultLength = lengthValue3 * 1000;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "decimeter":
+                    resultLength = lengthValue3 * 10000;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "centimeter":
+                    resultLength = lengthValue3 * 100000;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "millimeter":
+                    resultLength = lengthValue3 * 1000000;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultLength = parseFloat(null);
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+            }
+        break;
+        // Close Statement For Conversion of Kilometer
+
+        // Open Statement For Conversion of Hektometer
+        case "hektometer":
+            switch (lengthValue2)
+            {
+                case "kilometer":
+                    resultLength = lengthValue3 * .1;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "hektometer":
+                    resultLength = lengthValue3 * 1;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "dekameter":
+                    resultLength = lengthValue3 * 10;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "meter":
+                    resultLength = lengthValue3 * 100;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "decimeter":
+                    resultLength = lengthValue3 * 1000;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "centimeter":
+                    resultLength = lengthValue3 * 10000;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "millimeter":
+                    resultLength = lengthValue3 * 100000;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultLength = parseFloat(null);
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+            }
+        break;
+        // Close Statement For Conversion of Hektometer
+
+        // Open Statement For Conversion of Dekameter
+        case "dekameter":
+            switch (lengthValue2)
+            {
+                case "kilometer":
+                    resultLength = lengthValue3 * .01;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "hektometer":
+                    resultLength = lengthValue3 * .1;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "dekameter":
+                    resultLength = lengthValue3 * 1;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "meter":
+                    resultLength = lengthValue3 * 10;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "decimeter":
+                    resultLength = lengthValue3 * 100;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "centimeter":
+                    resultLength = lengthValue3 * 1000;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "millimeter":
+                    resultLength = lengthValue3 * 10000;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultLength = parseFloat(null);
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+            }
+        break;
+        // Close Statement For Conversion of Dekameter
+
+        // Open Statement For Conversion of Meter
+        case "meter":
+            switch (lengthValue2)
+            {
+                case "kilometer":
+                    resultLength = lengthValue3 * .001;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "hektometer":
+                    resultLength = lengthValue3 * .01;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "dekameter":
+                    resultLength = lengthValue3 * .1;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "meter":
+                    resultLength = lengthValue3 * 1;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "decimeter":
+                    resultLength = lengthValue3 * 10;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "centimeter":
+                    resultLength = lengthValue3 * 100;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "millimeter":
+                    resultLength = lengthValue3 * 1000;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultLength = parseFloat(null);
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+            }
+        break;
+        // Close Statement For Conversion of Meter
+
+        // Open Statement For Conversion of Decimeter
+        case "decimeter":
+            switch (lengthValue2)
+            {
+                case "kilometer":
+                    resultLength = lengthValue3 * .0001;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "hektometer":
+                    resultLength = lengthValue3 * .001;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "dekameter":
+                    resultLength = lengthValue3 * .01;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "meter":
+                    resultLength = lengthValue3 * .1;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "decimeter":
+                    resultLength = lengthValue3 * 1;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "centimeter":
+                    resultLength = lengthValue3 * 10;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "millimeter":
+                    resultLength = lengthValue3 * 100;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultLength = parseFloat(null);
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+            }
+        break;
+        // Close Statement For Conversion of Decimeter
+
+        // Open Statement For Conversion of Centimeter
+        case "centimeter":
+            switch (lengthValue2)
+            {
+                case "kilometer":
+                    resultLength = lengthValue3 * .00001;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "hektometer":
+                    resultLength = lengthValue3 * .0001;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "dekameter":
+                    resultLength = lengthValue3 * .001;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "meter":
+                    resultLength = lengthValue3 * .01;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "decimeter":
+                    resultLength = lengthValue3 * .1;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "centimeter":
+                    resultLength = lengthValue3 * 1;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "millimeter":
+                    resultLength = lengthValue3 * 10;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultLength = parseFloat(null);
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+            }
+        break;
+        // Close Statement For Conversion of Centimeter
+
+        // Open Statement For Conversion of Millimeter
+        case "millimeter":
+            switch (lengthValue2)
+            {
+                case "kilometer":
+                    resultLength = lengthValue3 * .000001;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "hektometer":
+                    resultLength = lengthValue3 * .00001;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "dekameter":
+                    resultLength = lengthValue3 * .0001;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "meter":
+                    resultLength = lengthValue3 * .001;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "decimeter":
+                    resultLength = lengthValue3 * .01;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "centimeter":
+                    resultLength = lengthValue3 * .1;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                case "millimeter":
+                    resultLength = lengthValue3 * 1;
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultLength = parseFloat(null);
+                    document.getElementById("lengthResult").value = resultLength;
+                break;
+            }
+        break;
+        // Close Statement For Conversion of Millimeter
+
+        default:
+            alert("Invalid Operation!"
+            + "\n\nPlease Complete the Form and Choose Unit to Convert.");
+            resultLength = parseFloat(null);
+            document.getElementById("lengthResult").value = resultLength;
+        break;
+    }
+}
+
+
+
+
+function ConvertTime()
+{
+    timeValue1 = document.getElementById("timeConvertFrom").value;
+    timeValue2 = document.getElementById("timeConvertTo").value;
+    timeValue3 = parseFloat(document.getElementById("timeValue1").value);
+
+    switch (timeValue1)
+    {
+        // Open Statement for Conversion of second(s)
+        case "second(s)":
+            switch (timeValue2)
+            {
+                case "second(s)":
+                    resultTime = timeValue3 * 1;
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                case "minute(s)":
+                    <!-- 1 second = (1 minute/60 seconds) = n minute -->
+                    resultTime = timeValue3 * (1/60);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                case "hour(s)":
+                    <!-- 1 second = (1 minute/60 seconds)(1 hour/60 minutes) = n hour -->
+                    resultTime = timeValue3 * (1/Math.pow(60, 2));
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                case "day(s)":
+                    <!-- 1 second = (1 minute/60 seconds)(1 hour/60 minutes)(1 day/24 hours) = n day -->
+                    resultTime = timeValue3 * (1/Math.pow(60, 2)) * (1/24);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                case "week(s)":
+                    <!-- 1 second = (1 minute/60 seconds)(1 hour/60 minutes)(1 day/24 hours)(1 week/7 days) = n week -->
+                    resultTime = timeValue3 * (1/Math.pow(60, 2)) * (1/24) * (1/7);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultTime = parseFloat(null);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+            }
+        break;
+        // Close Statement for Conversion of second(s)
+
+        // Open Statement for Conversion of minute(s)
+        case "minute(s)":
+            switch (timeValue2)
+            {
+                case "second(s)":
+                    <!-- 1 minute = (60 seconds/1 minute) = n second -->
+                    resultTime = timeValue3 * (60/1);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                case "minute(s)":
+                    resultTime = timeValue3 * 1;
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                case "hour(s)":
+                    <!-- 1 minute = (1 hour/60 minutes) = n hour -->
+                    resultTime = timeValue3 * (1/60);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                case "day(s)":
+                    <!-- 1 minute = (1 hour/60 minutes)(1 day/24 hours) = n day -->
+                    resultTime = timeValue3 * (1/60) * (1/24);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                case "week(s)":
+                    <!-- 1 minute = (1 hour/60 minutes)(1 day/24 hours)(1 week/7 days) = n week -->
+                    resultTime = timeValue3 * (1/60) * (1/24) * (1/7);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultTime = parseFloat(null);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+            }
+        break;
+        // Close Statement for Conversion of minute(s)
+
+        // Open Statement for Conversion of hour(s)
+        case "hour(s)":
+            switch (timeValue2)
+            {
+                case "second(s)":
+                    <!-- 1 hour = (60 minutes/1 hour)(60 seconds/1 minute) = n second -->
+                    resultTime = timeValue3 * (Math.pow(60, 2)/1);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                case "minute(s)":
+                    <!-- 1 hour = (60 minutes/1 hour) = n minute -->
+                    resultTime = timeValue3 * (60/1);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                case "hour(s)":
+                    resultTime = timeValue3 * 1;
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                case "day(s)":
+                    <!-- 1 hour = (1 day/24 hours) = n day -->
+                    resultTime = timeValue3 * (1/24);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                case "week(s)":
+                    <!-- 1 hour = (1 day/24 hours)(1 week/7 days) = n week -->
+                    resultTime = timeValue3 * (1/24) * (1/7);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultTime = parseFloat(null);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+            }
+        break;
+        // Close Statement for Conversion of hour(s)
+
+        // Open Statement for Conversion of day(s)
+        case "day(s)":
+            switch (timeValue2)
+            {
+                case "second(s)":
+                    <!-- 1 day = (24 hours/1 day)(60 minutes/1 hour)(60 seconds/1 minute) = n second -->
+                    resultTime = timeValue3 * (24/1) * (Math.pow(60, 2)/1);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                case "minute(s)":
+                    <!-- 1 day = (24 hours/1 day)(60 minutes/1 hour) = n minute -->
+                    resultTime = timeValue3 * (24/1) * (60/1);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                case "hour(s)":
+                    <!-- 1 day = (24 hours/1 day) = n hour -->
+                    resultTime = timeValue3 * (24/1);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                case "day(s)":
+                    resultTime = timeValue3 * 1;
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                case "week(s)":
+                    <!-- 1 day = (1 week/7 days) = n week -->
+                    resultTime = timeValue3 * (1/7);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultTime = parseFloat(null);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+            }
+        break;
+        // Close Statement for Conversion of day(s)
+
+        // Open Statement for Conversion of week(s)
+        case "week(s)":
+            switch (timeValue2)
+            {
+                case "second(s)":
+                    <!-- 1 week = (7 days/1 week)(24 hours/1 day)(60 minutes/1 hour)(60 seconds/1 minute) = n second -->
+                    resultTime = timeValue3 * (7/1) * (24/1) * (Math.pow(60, 2));
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                case "minute(s)":
+                    <!-- 1 week = (7 days/1 week)(24 hours/1 day)(60 minutes/1 hour) = n minute -->
+                    resultTime = timeValue3 * (7/1) * (24/1) * (60/1);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                case "hour(s)":
+                    <!-- 1 week = (7 days/1 week)(24 hours/1 day) = n hour -->
+                    resultTime = timeValue3 * (7/1) * (24/1);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                case "day(s)":
+                    <!-- 1 week = (7 days/1 week) = n day -->
+                    resultTime = timeValue3 * (7/1);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                case "week(s)":
+                    resultTime = timeValue3 * 1;
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultTime = parseFloat(null);
+                    document.getElementById("timeResult").value = resultTime;
+                break;
+            }
+        break;
+        // Close Statement for Conversion of week(s)
+
+        default:
+            alert("Invalid Operation!"
+            + "\n\nPlease Complete the Form and Choose Unit to Convert.");
+            resultTime = parseFloat(null);
+            document.getElementById("timeResult").value = resultTime;
+        break;
+    }
+}
+
+
+
+
+function MemorySize()
+{
+    memoryValue1 = document.getElementById("memoryConvertFrom").value;
+    memoryValue2 = document.getElementById("memoryConvertTo").value;
+    memoryValue3 = parseFloat(document.getElementById("memoryValue1").value);
+
+    switch (memoryValue1)
+    {
+        // Open Statement for Conversion of b (bit(s))
+        case "b (bit(s))":
+            switch (memoryValue2)
+            {
+                case "b (bit(s))":
+                    resultMemory = memoryValue3 * 1;
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "B (Byte(s))":
+                    <!-- 1 bit = (1 byte/8 bits) = n byte -->
+                    resultMemory = memoryValue3 * (1/8);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "KB (Kilobyte(s))":
+                    <!-- 1 bit = (1 byte/8 bits)(1 KB/2^10 bytes) = n KB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/8) * (1/1024);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "MB (Megabyte(s))":
+                    <!-- 1 bit = (1 byte/8 bits)(1 KB/2^10 bytes)(1 MB/2^10 KB) = n MB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/8) * (1/Math.pow(2, 20));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "GB (Gigabyte(s))":
+                    <!-- 1 bit = (1 byte/8 bits)(1 KB/2^10 bytes)(1 MB/2^10 KB)(1 GB/2^10 MB) = n GB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/8) * (1/Math.pow(2, 30));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "TB (Terabyte(s))":
+                    <!-- 1 bit = (1 byte/8 bits)(1 KB/2^10 bytes)(1 MB/2^10 KB)(1 GB/2^10 MB)(1 TB/2^10 GB) = n TB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/8) * (1/Math.pow(2, 40));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "PB (Petabyte(s))":
+                    <!-- 1 bit = (1 byte/8 bits)(1 KB/2^10 bytes)(1 MB/2^10 KB)(1 GB/2^10 MB)(1 TB/2^10 GB)(1 PB/2^10 TB) = n PB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/8) * (1/Math.pow(1, 50));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "EB (Exabyte(s))":
+                    <!-- 1 bit = (1 byte/8 bits)(1 KB/2^10 bytes)(1 MB/2^10 KB)(1 GB/2^10 MB)(1 TB/2^10 GB)(1 PB/2^10 TB)(1 EB/2^10 PB) = n EB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/8) * (1/Math.pow(2, 60));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "ZB (Zetabyte(s))":
+                    <!-- 1 bit = (1 byte/8 bits)(1 KB/2^10 bytes)(1 MB/2^10 KB)(1 GB/2^10 MB)(1 TB/2^10 GB)(1 PB/2^10 TB)(1 EB/2^10 PB)(1 ZB/2^10 EB) = n ZB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/8) * (1/Math.pow(2, 70));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultMemory = parseFloat(null);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+            }
+        break;
+        // Open Statement for Conversion of B (bit(s))
+
+        // Open Statement for Conversion of B (Byte(s))
+        case "B (Byte(s))":
+            switch (memoryValue2)
+            {
+                case "b (bit(s))":
+                    <!-- 1 byte = (8 bits/1 byte) = n bit -->
+                    resultMemory = memoryValue3 * (8/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "B (Byte(s))":
+                    resultMemory = memoryValue3 * 1;
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "KB (Kilobyte(s))":
+                    <!-- 1 byte = (1 KB/2^10 bytes) = n KB -->
+                    resultMemory = memoryValue3 * (1/1024);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "MB (Megabyte(s))":
+                    <!-- 1 byte = (1 KB/2^10 bytes)(1 MB/2^10 KB) = n MB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/Math.pow(2, 20));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "GB (Gigabyte(s))":
+                    <!-- 1 byte = (1 KB/2^10 bytes)(1 MB/2^10 KB)(1 GB/2^10 MB) = n GB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/Math.pow(2, 30));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "TB (Terabyte(s))":
+                    <!-- 1 byte = (1 KB/2^10 bytes)(1 MB/2^10 KB)(1 GB/2^10 MB)(1 TB/2^10 GB) = n TB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/Math.pow(2, 40));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "PB (Petabyte(s))":
+                    <!-- 1 byte = (1 KB/2^10 bytes)(1 MB/2^10 KB)(1 GB/2^10 MB)(1 TB/2^10 GB)(1 PB/2^10 TB) = n PB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/Math.pow(2, 50));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "EB (Exabyte(s))":
+                    <!-- 1 byte = (1 KB/2^10 bytes)(1 MB/2^10 KB)(1 GB/2^10 MB)(1 TB/2^10 GB)(1 PB/2^10 TB)(1 EB/2^10 PB) = n EB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/Math.pow(2, 60));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "ZB (Zetabyte(s))":
+                    <!-- 1 byte = (1 KB/2^10 bytes)(1 MB/2^10 KB)(1 GB/2^10 MB)(1 TB/2^10 GB)(1 PB/2^10 TB)(1 EB/2^10 PB)(1 ZB/2^10 EB) = n ZB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/Math.pow(2, 70));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultMemory = parseFloat(null);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+            }
+        break;
+        // Close Statement for Conversion of B (Byte(s))
+
+        // Open Statement for Conversion of KB (Kilobyte(s))
+        case "KB (Kilobyte(s))":
+            switch (memoryValue2)
+            {
+                case "b (bit(s))":
+                    <!-- 1 KB = (2^10 bytes/1 KB)(8 bits/1 byte) = n bit -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1024/1) * (8/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "B (Byte(s))":
+                    <!-- 1 KB = (2^10 bytes/1 KB) = n byte -->
+                    resultMemory = memoryValue3 * (1024/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "KB (Kilobyte(s))":
+                    resultMemory = memoryValue3 * 1;
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "MB (Megabyte(s))":
+                    <!-- 1 KB = (1 MB/2^10 KB) = n MB -->
+                    resultMemory = memoryValue3 * (1/1024);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "GB (Gigabyte(s))":
+                    <!-- 1 KB = (1 MB/2^10 KB)(1 GB/2^10 MB) = n GB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/Math.pow(2, 20));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "TB (Terabyte(s))":
+                    <!-- 1 KB = (1 MB/2^10 KB)(1 GB/2^10 MB)(1 TB/2^10 GB) = n TB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/Math.pow(2, 30));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "PB (Petabyte(s))":
+                    <!-- 1 KB = (1 MB/2^10 KB)(1 GB/2^10 MB)(1 TB/2^10 GB)(1 PB/2^10 TB) = n PB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/Math.pow(2, 40));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "EB (Exabyte(s))":
+                    <!-- 1 KB = (1 MB/2^10 KB)(1 GB/2^10 MB)(1 TB/2^10 GB)(1 PB/2^10 TB)(1 EB/2^10 PB) = n EB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/Math.pow(2, 50));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "ZB (Zetabyte(s))":
+                    <!-- 1 KB = (1 MB/2^10 KB)(1 GB/2^10 MB)(1 TB/2^10 GB)(1 PB/2^10 TB)(1 EB/2^10 PB)(1 ZB/2^10 EB) = n ZB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/Math.pow(2, 60));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultMemory = parseFloat(null);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+            }
+        break;
+        // Close Statement for Conversion of KB (Kilobyte(s))
+
+        // Open Statement for Conversion of MB (Megabyte(s))
+        case "MB (Megabyte(s))":
+            switch (memoryValue2)
+            {
+                case "b (bit(s))":
+                    <!-- 1 MB = (2^10 KB/1 MB)(2^10 bytes/1 KB)(8 bits/1 byte) = n bit -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 20)/1) * (8/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "B (Byte(s))":
+                    <!-- 1 MB = (2^10 KB/1 MB)(2^10 bytes/1 KB) = n byte -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 20)/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "KB (Kilobyte(s))":
+                    <!-- 1 MB = (2^10 KB/1 MB) = n KB -->
+                    resultMemory = memoryValue3 * (1024/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "MB (Megabyte(s))":
+                    resultMemory = memoryValue3 * 1;
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "GB (Gigabyte(s))":
+                    <!-- 1 MB = (1 GB/2^10 MB) = n GB -->
+                    resultMemory = memoryValue3 * (1/1024);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "TB (Terabyte(s))":
+                    <!-- 1 MB = (1 GB/2^10 MB)(1 TB/2^10 GB) = n TB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/Math.pow(2, 20));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "PB (Petabyte(s))":
+                    <!-- 1 MB = (1 GB/2^10 MB)(1 TB/2^10 GB)(1 PB/2^10 TB) = n PB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/Math.pow(2, 30));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "EB (Exabyte(s))":
+                    <!-- 1 MB = (1 GB/2^10 MB)(1 TB/2^10 GB)(1 PB/2^10 TB)(1 EB/2^10 PB) = n EB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/Math.pow(2, 40));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "ZB (Zetabyte(s))":
+                    <!-- 1 MB = (1 GB/2^10 MB)(1 TB/2^10 GB)(1 PB/2^10 TB)(1 EB/2^10 PB)(1 ZB/2^10 EB) = n ZB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/Math.pow(2, 50));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultMemory = parseFloat(null);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+            }
+        break;
+        // Close Statement for Conversion of MB (Megabyte(s))
+
+        // Open Statement for Conversion of GB (Gigabyte(s))
+        case "GB (Gigabyte(s))":
+            switch (memoryValue2)
+            {
+                case "b (bit(s))":
+                    <!-- 1 GB = (2^10 MB/1 GB)(2^10 KB/1 MB)(2^10 bytes/1 KB)(8 bits/1 byte) = n bit -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 30)/1) * (8/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "B (Byte(s))":
+                    <!-- 1 GB = (2^10 MB/1 GB)(2^10 KB/1 MB)(2^10 bytes/1 KB) = n byte -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 30)/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "KB (Kilobyte(s))":
+                    <!-- 1 GB = (2^10 MB/1 GB)(2^10 KB/1 MB) = n KB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 20)/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "MB (Megabyte(s))":
+                    <!-- 1 GB = (2^10 MB/1 GB) = n MB -->
+                    resultMemory = memoryValue3 * (1024/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "GB (Gigabyte(s))":
+                    resultMemory = memoryValue3 * 1;
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "TB (Terabyte(s))":
+                    <!-- 1 GB = (1 TB/2^10 GB) = n TB -->
+                    resultMemory = memoryValue3 * (1/1024);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "PB (Petabyte(s))":
+                    <!-- 1 GB = (1 TB/2^10 GB)(1 PB/2^10 TB) = n PB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/Math.pow(2, 20));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "EB (Exabyte(s))":
+                    <!-- 1 GB = (1 TB/2^10 GB)(1 PB/2^10 TB)(1 EB/2^10 PB) = n EB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/Math.pow(2, 30));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "ZB (Zetabyte(s))":
+                    <!-- 1 GB = (1 TB/2^10 GB)(1 PB/2^10 TB)(1 EB/2^10 PB)(1 ZB/2^10 EB) = n ZB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/Math.pow(2, 40));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultMemory = parseFloat(null);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+            }
+        break;
+        // Close Statement for Conversion of GB (Gigabyte(s))
+
+        // Open Statement for Conversion of TB (Terabyte(s))
+        case "TB (Terabyte(s))":
+            switch (memoryValue2)
+            {
+                case "b (bit(s))":
+                    <!-- 1 TB = (2^10 GB/1 TB)(2^10 MB/1 GB)(2^10 KB/1 MB)(2^10 bytes/1 KB)(8 bits/1 byte) = n bit -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 40)/1) * (8/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "B (Byte(s))":
+                    <!-- 1 TB = (2^10 GB/1 TB)(2^10 MB/1 GB)(2^10 KB/1 MB)(2^10 bytes/1 KB) = n byte -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 40)/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "KB (Kilobyte(s))":
+                    <!-- 1 TB = (2^10 GB/1 TB)(2^10 MB/1 GB)(2^10 KB/1 MB) = n KB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 30)/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "MB (Megabyte(s))":
+                    <!-- 1 TB = (2^10 GB/1 TB)(2^10 MB/1 GB) = n MB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 20)/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "GB (Gigabyte(s))":
+                    <!-- 1 TB = (2^10 GB/1 TB) = n GB -->
+                    resultMemory = memoryValue3 * (1024/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "TB (Terabyte(s))":
+                    resultMemory = memoryValue3 * 1;
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "PB (Petabyte(s))":
+                    <!-- 1 TB = (1 PB/2^10 TB) = n PB -->
+                    resultMemory = memoryValue3 * (1/1024);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "EB (Exabyte(s))":
+                    <!-- 1 TB = (1 PB/2^10 TB)(1 EB/2^10 PB) = n EB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/Math.pow(2, 20));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "ZB (Zetabyte(s))":
+                    <!-- 1 TB = (1 PB/2^10 TB)(1 EB/2^10 PB)(1 ZB/2^10 EB) = n ZB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/Math.pow(2, 30));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultMemory = parseFloat(null);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+            }
+        break;
+        // Close Statement for Conversion of TB (Terabyte(s))
+
+        // Open Statement for Conversion of PB (Petabyte(s))
+        case "PB (Petabyte(s))":
+            switch (memoryValue2)
+            {
+                case "b (bit(s))":
+                    <!-- 1 PB = (2^10 TB/1 PB)(2^10 GB/1 TB)(2^10 MB/1 GB)(2^10 KB/1 MB)(2^10 bytes/1 KB)(8 bits/1 byte) = n bit -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 50)/1) * (8/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "B (Byte(s))":
+                    <!-- 1 PB = (2^10 TB/1 PB)(2^10 GB/1 TB)(2^10 MB/1 GB)(2^10 KB/1 MB)(2^10 bytes/1 KB) = n byte -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 50)/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "KB (Kilobyte(s))":
+                    <!-- 1 PB = (2^10 TB/1 PB)(2^10 GB/1 TB)(2^10 MB/1 GB)(2^10 KB/1 MB) = n KB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 40)/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "MB (Megabyte(s))":
+                    <!-- 1 PB = (2^10 TB/1 PB)(2^10 GB/1 TB)(2^10 MB/1 GB) = n MB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 30)/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "GB (Gigabyte(s))":
+                    <!-- 1 PB = (2^10 TB/1 PB)(2^10 GB/1 TB) = n GB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 20)/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "TB (Terabyte(s))":
+                    <!-- 1 PB = (2^10 TB/1 PB) = n TB -->
+                    resultMemory = memoryValue3 * (1024/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "PB (Petabyte(s))":
+                    resultMemory = memoryValue3 * 1;
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "EB (Exabyte(s))":
+                    <!-- 1 PB = (1 EB/2^10 PB) = n EB -->
+                    resultMemory = memoryValue3 * (1/1024);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "ZB (Zetabyte(s))":
+                    <!-- 1 PB = (1 EB/2^10 PB)(1 ZB/2^10 EB) = n ZB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (1/Math.pow(2, 20));
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultMemory = parseFloat(null);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+            }
+        break;
+        // Close Statement for Conversion of PB (Petabyte(s))
+
+        // Open Statement for Conversion of EB (Exabyte(s))
+        case "EB (Exabyte(s))":
+            switch (memoryValue2)
+            {
+                case "b (bit(s))":
+                    <!-- 1 EB = (2^10 PB/1 EB)(2^10 TB/1 PB)(2^10 GB/1 TB)(2^10 MB/1 GB)(2^10 KB/1 MB)(2^10 bytes/1 KB)(8 bits/1 byte) = n bit -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 60)/1) * (8/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "B (Byte(s))":
+                    <!-- 1 EB = (2^10 PB/1 EB)(2^10 TB/1 PB)(2^10 GB/1 TB)(2^10 MB/1 GB)(2^10 KB/1 MB)(2^10 bytes/1 KB) = n byte -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 60)/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "KB (Kilobyte(s))":
+                    <!-- 1 EB = (2^10 PB/1 EB)(2^10 TB/1 PB)(2^10 GB/1 TB)(2^10 MB/1 GB)(2^10 KB/1 MB) = n KB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 50)/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "MB (Megabyte(s))":
+                    <!-- 1 EB = (2^10 PB/1 EB)(2^10 TB/1 PB)(2^10 GB/1 TB)(2^10 MB/1 GB) = n MB --
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 40)/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "GB (Gigabyte(s))":
+                    <!-- 1 EB = (2^10 PB/1 EB)(2^10 TB/1 PB)(2^10 GB/1 TB) = n GB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 30)/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "TB (Terabyte(s))":
+                    <!-- 1 EB = (2^10 PB/1 EB)(2^10 TB/1 PB) = n TB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 20)/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "PB (Petabyte(s))":
+                    <!-- 1 EB = (2^10 PB/1 EB) = n PB -->
+                    resultMemory = memoryValue3 * (1024/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "EB (Exabyte(s))":
+                    resultMemory = memoryValue3 * 1;
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "ZB (Zetabyte(s))":
+                    <!-- 1 EB = (1 ZB/2^10 EB) = n ZB -->
+                    resultMemory = memoryValue3 * (1/1024);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultMemory = parseFloat(null);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+            }
+        break;
+        // Close Statement for Conversion of EB (Exabyte(s))
+
+        // Open Statement for Conversion of ZB (Zetabyte(s))
+        case "ZB (Zetabyte(s))":
+            switch (memoryValue2)
+            {
+                case "b (bit(s))":
+                    <!-- 1 ZB = (2^10 EB/1 ZB)(2^10 PB/1 EB)(2^10 TB/1 PB)(2^10 GB/1 TB)(2^10 MB/1 GB)(2^10 KB/1 MB)(2^10 bytes/1 KB)(8 bits/1 byte) = n bit -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 70)/1) * (8/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "B (Byte(s))":
+                    <!-- 1 ZB = (2^10 EB/1 ZB)(2^10 PB/1 EB)(2^10 TB/1 PB)(2^10 GB/1 TB)(2^10 MB/1 GB)(2^10 KB/1 MB)(2^10 bytes/1 KB) = n byte -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 70)/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "KB (Kilobyte(s))":
+                    <!-- 1 ZB = (2^10 EB/1 ZB)(2^10 PB/1 EB)(2^10 TB/1 PB)(2^10 GB/1 TB)(2^10 MB/1 GB)(2^10 KB/1 MB) = n KB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 60)/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "MB (Megabyte(s))":
+                    <!-- 1 ZB = (2^10 EB/1 ZB)(2^10 PB/1 EB)(2^10 TB/1 PB)(2^10 GB/1 TB)(2^10 MB/1 GB) = n MB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 50)/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "GB (Gigabyte(s))":
+                    <!-- 1 ZB = (2^10 EB/1 ZB)(2^10 PB/1 EB)(2^10 TB/1 PB)(2^10 GB/1 TB) = n GB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 40)/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "TB (Terabyte(s))":
+                    <!-- 1 ZB = (2^10 EB/1 ZB)(2^10 PB/1 EB)(2^10 TB/1 PB) = n TB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 30)/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "PB (Petabyte(s))":
+                    <!-- 1 ZB = (2^10 EB/1 ZB)(2^10 PB/1 EB) = n PB -->
+                    <!-- To Simplify: -->
+                    resultMemory = memoryValue3 * (Math.pow(2, 20)/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "EB (Exabyte(s))":
+                    <!-- 1 ZB = (2^10 EB/1 ZB) = n EB -->
+                    resultMemory = memoryValue3 * (1024/1);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                case "ZB (Zetabyte(s))":
+                    resultMemory = memoryValue3 * 1;
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultMemory = parseFloat(null);
+                    document.getElementById("memoryResult").value = resultMemory;
+                break;
+            }
+        break;
+        // Close Statement for Conversion of ZB (Zetabyte(s))
+
+        default:
+            alert("Invalid Operation!"
+            + "\n\nPlease Complete the Form and Choose Unit to Convert.");
+            resultMemory = parseFloat(null);
+            document.getElementById("memoryResult").value = resultMemory;
+        break;
+    }
+}
+
+
+
+
+function DigitalNumberSystem() {
+/*
+* Problem:
+* Needs to Simplify Codes
+*/
+/*
+// Decimal to Binary
+num = parseFloat(prompt("Enter Fractional Num: "));
+
+wholeNum = parseInt(num);
+
+numLength = num.toString().length;
+wholeNumLength = wholeNum.toString().length;
+lengthString = numLength - wholeNumLength;
+
+// Decimal Fraction to Binary Fraction
+fractionNum = parseFloat((wholeNum - num).toString().substr(2, lengthString));
+textStringFraction = "";
+// divisorBinary = 2;
+checking = true;
+for (i = 0; checking != false; i++) {
+    // Limits the counter to avoid long numbers result.
+    product = fractionNum * convertFrom;
+
+    wholeNumLoop = parseInt(product);
+    productLength = product.toString().length;
+    wholeNumLoopLength = wholeNumLoop.toString().length;
+    lengthStringLoop = productLength - wholeNumLoopLength;
+
+    if (i <= 19) {
+    fractionNum = parseFloat((wholeNumLoop - product).toString().substr(2, lengthStringLoop));
+    textStringFraction = wholeNumLoop + textStringFraction;
+    checking = (( parseFloat(fractionNum) == fractionNum ) ? true : false);
+    }
+    // Limits the counter to avoid long numbers result and display Infinite.
+    else if (i > 19) {
+        product = "Infinite Num";
+
+        lengthStringLoop = "Infinite Num";
+        fractionNum = "Infinite Num";
+        textStringFraction = textStringFraction + "....";
+        checking = false;
+    }
+
+    document.write("<br/><br/>" + wholeNum
++ "<br/>" + wholeNumLoop
++ "<br/>" + textStringFraction);
+}
+*/
+
+    digitalNumberSystemValue1 = document.getElementById("digitalNumberingSystemConvertFrom").value;
+    digitalNumberSystemValue2 = document.getElementById("digitalNumberingSystemConvertTo").value;
+    digitalNumberSystemValue3 = document.getElementById("digitalNumberingSystemValue1").value;
+
+    // document.getElementById("digitalNumberingSystemResult").value;
+
+    function toDecimal() {
+        // Whole Number Part
+        add = 0;
+        for (i = 0; i < digitalNumberSystemValue3.length; i++) {
+            result = digitalNumberSystemValue3.charAt(i);
+            convert = result * Math.pow(convertFrom, ((digitalNumberSystemValue3.length - 1) - i));
+            add = convert + add;
+         }
+    }
+
+    function toBinary() {
+        division = null;
+        textString = "";
+        for (i = 0; parseInt(division) != 0; i++) {
+            division = digitalNumberSystemValue3 / convertFrom;
+            remainder = digitalNumberSystemValue3 % convertFrom;
+            textString = remainder + "" + textString;
+            digitalNumberSystemValue3 = parseInt(division);
+        }
+    }
+
+    function toHexadecimal() {
+        division = null;
+        textString = "";
+        for (i = 0; parseInt(division) != 0; i++) {
+            division = digitalNumberSystemValue3 / convertFrom;
+            remainder = digitalNumberSystemValue3 % convertFrom;
+
+            if (remainder == 10) {
+                remainder = "A";
+            }
+
+            else if (remainder == 11) {
+                remainder = "B";
+            }
+
+            else if (remainder == 12) {
+                remainder = "C";
+            }
+
+            else if (remainder == 13) {
+                remainder = "D";
+            }
+
+            else if (remainder == 14) {
+                remainder = "E";
+            }
+
+            else if (remainder == 15) {
+                remainder = "F";
+            }
+
+            textString = remainder + "" + textString;
+            digitalNumberSystemValue3 = parseInt(division);
+        }
+    }
+
+    function toOctalDecimal() {
+        division = null;
+        textString = "";
+        for (i = 0; parseInt(division) != 0; i++) {
+            division = digitalNumberSystemValue3 / convertFrom;
+            remainder = digitalNumberSystemValue3 % convertFrom;
+            textString = remainder + "" + textString;
+            digitalNumberSystemValue3 = parseInt(division);
+        }
+    }
+
+    function fromHexadecimal() {
+        add = 0;
+        for (i = 0; i < digitalNumberSystemValue3.length; i++) {
+            result = digitalNumberSystemValue3.toUpperCase().charAt(i);
+
+            if (result == "A") {
+                result = 10;
+            }
+
+            else if (result == "B") {
+                result = 11;
+            }
+
+            else if (result == "C") {
+                result = 12;
+            }
+
+            else if (result == "D") {
+                result = 13;
+            }
+
+            else if (result == "E") {
+                result = 14;
+            }
+
+            else if (result == "F") {
+                result = 15;
+            }
+
+            else if (result >= 0 || result < 0) {
+                result = parseInt(result);
+            }
+
+            else {
+                result = null;
+            }
+
+            convert = result * Math.pow(convertFrom, ((digitalNumberSystemValue3.length - 1) - i));
+            add = convert + add;
+
+            alert(convert + " " + add);
+        }
+    }
+
+    switch (digitalNumberSystemValue1) {
+        case "Decimal":
+            switch (digitalNumberSystemValue2) {
+                case "Decimal":
+                    convertFrom = 10;
+                    toDecimal();
+                    document.getElementById("digitalNumberingSystemResult").value = add;
+                break;
+
+                case "Binary":
+                    convertFrom = 2;
+                    toBinary();
+                    document.getElementById("digitalNumberingSystemResult").value = textString;
+                break;
+
+                case "Hexadecimal":
+                    convertFrom = 16;
+                    toHexadecimal();
+                    document.getElementById("digitalNumberingSystemResult").value = textString;
+                break;
+
+                case "Octal Decimal":
+                    convertFrom = 8;
+                    toOctalDecimal();
+                    document.getElementById("digitalNumberingSystemResult").value = textString;
+                break;
+
+                default:
+                    document.getElementById("digitalNumberingSystemResult").value = parseFloat(null);
+                break;
+            }
+        break;
+
+        case "Binary":
+            switch (digitalNumberSystemValue2) {
+                case "Decimal":
+                    convertFrom = 2;
+                    toDecimal();
+                    document.getElementById("digitalNumberingSystemResult").value = add;
+                break;
+
+                case "Binary":
+                    convertFrom = 2;
+
+                    // Binary to Decimal
+                    toDecimal();
+
+                    digitalNumberSystemValue3 = add;
+
+                    // Decimal to Binary
+                    toBinary();
+
+                    document.getElementById("digitalNumberingSystemResult").value = textString;
+                break;
+
+                case "Hexadecimal":
+                    // Binary to Decimal
+                    convertFrom = 2;
+                    toDecimal();
+
+                    digitalNumberSystemValue3 = add;
+
+                    // Decimal to Hexadecimal
+                    convertFrom = 16
+                    toHexadecimal();
+
+                    document.getElementById("digitalNumberingSystemResult").value = textString;
+                break;
+
+                case "Octal Decimal":
+                    // Binary to Decimal
+                    convertFrom = 2;
+                    toDecimal();
+
+                    digitalNumberSystemValue3 = add;
+
+                    // Decimal to Octal Decimal
+                    convertFrom = 8;
+                    toOctalDecimal();
+
+                    document.getElementById("digitalNumberingSystemResult").value = textString;
+                break;
+
+                default:
+                    document.getElementById("digitalNumberingSystemResult").value = parseFloat(null);
+                break;
+            }
+        break;
+
+        case "Hexadecimal":
+            switch (digitalNumberSystemValue2) {
+                case "Decimal":
+                    convertFrom = 16;
+                    fromHexadecimal();
+                    document.getElementById("digitalNumberingSystemResult").value = add;
+                break;
+
+                case "Binary":
+                    // Hexadecimal to Decimal
+                    convertFrom = 16;
+                    fromHexadecimal();
+
+                    digitalNumberSystemValue3 = add;
+
+                    // Decimal to Binary
+                    convertFrom = 2;
+                    toBinary();
+
+                    document.getElementById("digitalNumberingSystemResult").value = textString;
+                break;
+
+                case "Hexadecimal":
+                    // Hexadecimal to Decimal
+                    convertFrom = 16;
+                    fromHexadecimal();
+
+                    digitalNumberSystemValue3 = add;
+
+                    // Decimal to Hexadecimal
+                    convertFrom = 16
+                    toHexadecimal();
+
+                    document.getElementById("digitalNumberingSystemResult").value = textString;
+                break;
+
+                case "Octal Decimal":
+                    // Hexadecimal to Decimal
+                    convertFrom = 16;
+                    fromHexadecimal();
+
+                    digitalNumberSystemValue3 = add;
+
+                    // Decimal to Octal Decimal
+                    convertFrom = 8;
+                    toOctalDecimal();
+
+                    document.getElementById("digitalNumberingSystemResult").value = textString;
+                break;
+
+                default:
+                    document.getElementById("digitalNumberingSystemResult").value = parseFloat(null);
+                break;
+            }
+        break;
+
+        case "Octal Decimal":
+            switch (digitalNumberSystemValue2) {
+                case "Decimal":
+                    convertFrom = 8;
+                    toDecimal();
+
+                    document.getElementById("digitalNumberingSystemResult").value = add;
+                break;
+
+                case "Binary":
+                    // Octal Decimal to Decimal
+                    convertFrom = 8;
+                    toDecimal();
+
+                    digitalNumberSystemValue3 = add;
+    
+                    // Decimal to Binary
+                    convertFrom = 2;
+                    toBinary();
+
+                    document.getElementById("digitalNumberingSystemResult").value = textString;
+                break;
+
+                case "Hexadecimal":
+                    // Octal Decimal to Decimal
+                    convertFrom = 8;
+                    toDecimal();
+
+                    digitalNumberSystemValue3 = add;
+
+                    // Decimal to Hexadecimal
+                    convertFrom = 16;
+                    toHexadecimal();
+
+                    document.getElementById("digitalNumberingSystemResult").value = textString;
+                break;
+
+                case "Octal Decimal":
+                    // Octal Decimal to Decimal
+                    convertFrom = 8;
+                    toDecimal();
+
+                    digitalNumberSystemValue3 = add;
+
+                    // Decimal to Octal Decimal
+                    convertFrom = 8;
+                    toOctalDecimal();
+
+                    document.getElementById("digitalNumberingSystemResult").value = textString;
+                break;
+
+                default:
+                    document.getElementById("digitalNumberingSystemResult").value = parseFloat(null);
+                break;
+            }
+        break;
+
+        default:
+            switch (digitalNumberSystemValue2) {
+                case "Decimal":
+                    document.getElementById("digitalNumberingSystemResult").value = parseFloat(null);
+                break;
+
+                case "Binary":
+                    document.getElementById("digitalNumberingSystemResult").value = parseFloat(null);
+                break;
+
+                case "Hexadecimal":
+                    document.getElementById("digitalNumberingSystemResult").value = parseFloat(null);
+                break;
+
+                case "Octal Decimal":
+                    document.getElementById("digitalNumberingSystemResult").value = parseFloat(null);
+                break;
+
+                default:
+                    document.getElementById("digitalNumberingSystemResult").value = parseFloat(null);
+                break;
+            }
+        break;
+    }
+}
+
+
+
+
+function ConvertAngle()
+{
+    angleValue1 = document.getElementById("angleConvertFrom").value;
+    angleValue2 = document.getElementById("angleConvertTo").value;
+    angleValue3 = parseFloat(document.getElementById("angleValue1").value);
+
+    switch (angleValue1)
+    {
+        // Open Statement for Degree Conversion
+        case "Degree":
+            switch (angleValue2)
+            {
+                case "Degree":
+                    resultAngle = angleValue3 * 1;
+                    document.getElementById("angleResult").value = resultAngle;
+                break;
+
+                case "Radian":
+                    <!-- 1 Degree = 1(PI/180) -->
+                    resultAngle = angleValue3 * (Math.PI/180);
+                    document.getElementById("angleResult").value = resultAngle;
+                break;
+
+                case "Gradian":
+                    <!-- 1 Degree = 1(10/9) -->
+                    resultAngle = angleValue3 * (10/9);
+                    document.getElementById("angleResult").value = resultAngle;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultAngle = parseFloat(null);
+                    document.getElementById("angleResult").value = resultAngle;
+                break;
+            }
+        break;
+        // Close Statement for Degree Conversion
+
+        // Open Statement for Radian Conversion
+        case "Radian":
+            switch (angleValue2)
+            {
+                case "Degree":
+                    <!-- 1 Radian = 1(180/PI) -->
+                    resultAngle = angleValue3 * (180/Math.PI);
+                    document.getElementById("angleResult").value = resultAngle;
+                break;
+
+                case "Radian":
+                    resultAngle = angleValue3 * 1;
+                    document.getElementById("angleResult").value = resultAngle;
+                break;
+
+                case "Gradian":
+                    <!-- 1 Radian = 1(10/9)(180/PI) -->
+                    resultAngle = angleValue3 * (10/9) * (180/Math.PI);
+                    document.getElementById("angleResult").value = resultAngle;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultAngle = parseFloat(null);
+                    document.getElementById("angleResult").value = resultAngle;
+                break;
+            }
+        break;
+        // Close Statement for Radian Conversion
+
+        // Open Statement for Gradian Conversion
+        case "Gradian":
+            switch (angleValue2)
+            {
+                case "Degree":
+                    <!-- 1 Gradian = 1(9/10) -->
+                    resultAngle = angleValue3 * (9/10);
+                    document.getElementById("angleResult").value = resultAngle;
+                break;
+
+                case "Radian":
+                    <!-- 1 Gradian = 1(9/10)(PI/180) -->
+                    resultAngle = angleValue3 * (9/10) * (Math.PI/180);
+                    document.getElementById("angleResult").value = resultAngle;
+                break;
+
+                case "Gradian":
+                    resultAngle = angleValue3 * 1;
+                    document.getElementById("angleResult").value = resultAngle;
+                break;
+
+                default:
+                    alert("Invalid Convertion!"
+                    + "\n\nPlease Choose Unit to Convert.");
+                    resultAngle = parseFloat(null);
+                    document.getElementById("angleResult").value = resultAngle;
+                break;
+            }
+        break;
+        // Close Statement for Gradian Conversion
+
+        default:
+            alert("Invalid Operation!"
+            + "\n\nPlease Complete the Form and Choose Unit to Convert.");
+            resultAngle = parseFloat(null);
+            document.getElementById("angleResult").value = resultAngle;
+        break;
+    }
+}
+
+
+
+
+function EquivalentGrade()
+{
+    // Under Checking Reliability
+    scoreMode = document.getElementById("scoresGradeConvertion").value;
+    correctItems = parseFloat(document.getElementById("scoresValue1").value);
+    requiredItems = parseFloat(document.getElementById("scoresValue2").value);
+
+    switch (scoreMode)
+    {
+        case "First Transmutation":
+            if (((correctItems >= 0) && (requiredItems > 0)) && (requiredItems >= correctItems))
+            {
+                FirstTransmute = parseFloat((correctItems / requiredItems) * 50 + 50);
+                resultScores = FirstTransmute;
+                alert("Under Maintenance in Checking Reliability");
+                document.getElementById("scoresResult").value = resultScores;
+            }
+
+            else if (((correctItems < 0) || (requiredItems <= 0)) || (requiredItems < correctItems))
+            {
+                alert("Invalid Number of Total Items"
+                + "\nthat is Greater Than"
+                + "\nNumber of Correct Items!");
+                resultScores = parseFloat(null);
+                alert("Under Maintenance in Checking Reliability");
+                document.getElementById("scoresResult").value = resultScores;
+            }
+
+            else
+            {
+                alert("Invalid Operation!"
+                + "\n\nPlease Complete the Form and Choose Mode of Grade to Convert.");
+                resultScores = parseFloat(null);
+                alert("Under Maintenance in Checking Reliability");
+                document.getElementById("scoresResult").value = resultScores;
+            }
+        break;
+
+        case "Second Transmutation":
+            if (((correctItems >= 0) && (requiredItems > 0)) && (requiredItems >= correctItems))
+            {
+                SecondTransmute = parseFloat((correctItems / requiredItems) * 32 + 65);
+                resultScores = SecondTransmute;
+                alert("Under Maintenance in Checking Reliability");
+                document.getElementById("scoresResult").value = resultScores;
+            }
+
+            else if (((correctItems < 0) || (requiredItems <= 0)) || (requiredItems < correctItems))
+            {
+                alert("Invalid Number of Total Items"
+                + "\nthat is Greater Than"
+                + "\nNumber of Correct Items!");
+                resultScores = parseFloat(null);
+                alert("Under Maintenance in Checking Reliability");
+                document.getElementById("scoresResult").value = resultScores;
+            }
+
+            else
+            {
+                alert("Invalid Operation!"
+                + "\n\nPlease Complete the Form and Choose Mode of Grade to Convert.");
+                resultScores = parseFloat(null);
+                alert("Under Maintenance in Checking Reliability");
+                document.getElementById("scoresResult").value = resultScores;
+            }
+        break;
+
+        default:
+            alert("Invalid Convertion!"
+            + "\n\nPlease Choose Mode of Grade to Convert.");
+            resultScores = parseFloat(null);
+            alert("Under Maintenance in Checking Reliability");
+            document.getElementById("scoresResult").value = resultScores;
+        break;
+    }
+}
+
+
+
+
+function Maintenance()
+{
+    alert("Under Maintenance");
+    result = "Under Maintenance";
+    return result;
+}
+</script>
+
+</head>
+<body>
+<!--
+* The Currency Exchange Amount is not constant every time of a year because it is based on stock market thats why I do not make a Currency Converter.
+-->
+
+<h2 align = "center">Browser Converter</h2>
+
+<form>
+Length Converter (English Measuring System):
+<input type = "text" size = "10" id = "lengthValue1" placeholder = "Enter Value" required> <select id = "lengthConvertFrom">
+    <option>Convert From:</option>
+    <option>millimeter</option>
+    <option>centimeter</option>
+    <option>decimeter</option>
+    <option>meter</option>
+    <option>dekameter</option>
+    <option>hektometer</option>
+    <option>kilometer</option>
+</select> &rArr; <input type = "text" size = "10" id = "lengthResult" placeholder = "Result" readonly/> <select id = "lengthConvertTo">
+    <option>Convert To:</option>
+    <option>millimeter</option>
+    <option>centimeter</option>
+    <option>decimeter</option>
+    <option>meter</option>
+    <option>dekameter</option>
+    <option>hektometer</option>
+    <option>kilometer</option>
+</select>
+<input type = "button" value = "Calculate" onclick = "ConvertLength()"/>
+<input type = "reset" value = "Reset"/>
+</form>
+<noscript>Your browser does not support script languages. Please adjust the settings of your browser to run this feature.</noscript><br/>
+<br/>
+<br/>
+<form>
+Time Converter (upto Week(s) for System Reliability):
+<input type = "text" size = "10" id = "timeValue1" placeholder = "Enter Value" required> <select id = "timeConvertFrom">
+    <option>Convert From:</option>
+    <option>second(s)</option>
+    <option>minute(s)</option>
+    <option>hour(s)</option>
+    <option>day(s)</option>
+    <option>week(s)</option>
+</select> &rArr; <input type = "text" size = "10" id = "timeResult" placeholder = "Result" readonly/> <select id = "timeConvertTo">
+    <option>Convert To:</option>
+    <option>second(s)</option>
+    <option>minute(s)</option>
+    <option>hour(s)</option>
+    <option>day(s)</option>
+    <option>week(s)</option>
+</select>
+<input type = "button" value = "Calculate" onclick = "ConvertTime()"/>
+<input type = "reset" value = "Reset"/>
+</form>
+<noscript>Your browser does not support script languages. Please adjust the settings of your browser to run this feature.</noscript><br/>
+<br/>
+<br/>
+<form>
+Binary Units (Memory Storage) Converter:
+<input type = "text" size = "10" id = "memoryValue1" placeholder = "Enter Value" repquired/> <select id = "memoryConvertFrom">
+    <option>Convert From:</option>
+    <option>b (bit(s))</option>
+    <option>B (Byte(s))</option>
+    <option>KB (Kilobyte(s))</option>
+    <option>MB (Megabyte(s))</option>
+    <option>GB (Gigabyte(s))</option>
+    <option>TB (Terabyte(s))</option>
+    <option>PB (Petabyte(s))</option>
+    <option>EB (Exabyte(s))</option>
+    <option>ZB (Zetabyte(s))</option>
+</select> &rArr; <input type = "text" size = "10" id = "memoryResult" placeholder = "Result" readonly/> <select id = "memoryConvertTo">
+<option>Convert To:</option>
+    <option>b (bit(s))</option>
+    <option>B (Byte(s))</option>
+    <option>KB (Kilobyte(s))</option>
+    <option>MB (Megabyte(s))</option>
+    <option>GB (Gigabyte(s))</option>
+    <option>TB (Terabyte(s))</option>
+    <option>PB (Petabyte(s))</option>
+    <option>EB (Exabyte(s))</option>
+    <option>ZB (Zetabyte(s))</option>
+</select>
+<input type = "button" value = "Calculate" onclick = "MemorySize()"/>
+<input type = "reset" value = "Reset"/>
+</form>
+<noscript>Your browser does not support script languages. Please adjust the settings of your browser to run this feature.</noscript><br/>
+<br/>
+<br/>
+<form>
+Numbering System (Digital):
+<select id = "digitalNumberingSystemConvertFrom">
+    <option>Convert From:</option>
+    <option>Decimal</option>
+    <option>Binary</option>
+    <option>Hexadecimal</option>
+    <option>Octal Decimal</option>
+</select> <input type = "text" size = "10" id = "digitalNumberingSystemValue1" placeholder = "Enter Value" required/> &rArr; <select id = "digitalNumberingSystemConvertTo">
+    <option>Convert To:</option>
+    <option>Decimal</option>
+    <option>Binary</option>
+    <option>Hexadecimal</option>
+    <option>Octal Decimal</option>
+</select> <input type = "text" size = "10" id = "digitalNumberingSystemResult" placeholder = "Result" readonly/>
+<input type = "button" value = "Calculate" onclick = "DigitalNumberSystem()"/>
+<input type = "reset" value = "Reset"/>
+</form>
+<noscript>Your browser does not support script languages. Please adjust the settings of your browser to run this feature.</noscript><br/>
+<br/>
+<br/>
+<form>
+Angle Converter:
+<input type = "text" size = "10" id = "angleValue1" placeholder = "Enter Value" required/> <select id = "angleConvertFrom">
+    <option>Convert From:</option>
+    <option>Degree</option>
+    <option>Radian</option>
+    <option>Gradian</option>
+</select> &rArr; <input type = "text" size = "10" id = "angleResult" placeholder = "Result" readonly/> <select id = "angleConvertTo">
+    <option>Convert To:</option>
+    <option>Degree</option>
+    <option>Radian</option>
+    <option>Gradian</option>
+</select>
+<input type = "button" value = "Calculate" onclick = "ConvertAngle()"/>
+<input type = "reset" value = "Reset"/>
+</form>
+<noscript>Your browser does not support script languages. Please adjust the settings of your browser to run this feature.</noscript><br/>
+<br/>
+<br/>
+<form>
+Equivalent Scores:
+Raw Items (Correct Items): <input type = "text" size = "10" id = "scoresValue1" placeholder = "Enter Value" required/>
+Total Items: <input type = "text" size = "10" id = "scoresValue2" placeholder = "Enter Value" required/>
+<select id = "scoresGradeConvertion">
+    <option>Grade Mode:</option>
+    <option>First Transmutation</option>
+    <option>Second Transmutation</option>
+</select>: <input type = "text" size = "10" id = "scoresResult" placeholder = "Result" readonly/>
+<input type = "button" value = "Calculate" onclick = "EquivalentGrade()"/>
+<input type = "reset" value = "Clear"/>
+</form>
+<noscript>Your browser does not support script languages. Please adjust the settings of your browser to run this feature.</noscript>
+
+</body>
+</html>
