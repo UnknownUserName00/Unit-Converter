@@ -1,0 +1,367 @@
+<! DOCTYPE html>
+<html>
+<head>
+<title>All in One Calculator</title>
+<!-- Auto Scaling Web Page for Different Screen Sizes -->
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1"/>
+<style>
+    form {
+        white-space: pre;
+        // background-color: Gold;
+        // border-style: solid;
+        // border-color: Orange;
+        // border-width: thin;
+        // text-shadow: 5px 5px 5px Indigo;
+        // box-shadow: 5px 5px 5px Orange;
+        // font-weight: Bold;
+    }
+
+    noscript {
+        color: OrangeRed;
+    }
+
+    body {
+        display: grid;
+    }
+
+    input[type = "text"] {
+        text-align: center;
+        background-color: SkyBlue;
+        border-style: solid;
+        border-color: Black;
+        // border-width: thin;
+        color: Black;
+        // text-shadow: 5px 5px 5px Indigo;
+        // box-shadow: 5px 5px 5px Indigo;
+        font-weight: Bold;
+    }
+
+    select, input[type = "button"], input[type = "reset"] {
+        background-color: Orange;
+        border-style: solid;
+        border-color: Black;
+        // border-width: thin;
+        color: Black;
+        // text-shadow: 5px 5px 5px Indigo;
+        // box-shadow: 5px 5px 5px Maroon;
+        font-weight: Bold;
+    }
+
+    input[type = "button"] {
+        width: 20%;
+    }
+
+    textarea {
+        height: 100;
+        width: 200;
+        white-space: pre;
+        background-color: SkyBlue;
+        // color: Black;
+        border-style: solid;
+        border-color: Black;
+        border-width: thin;
+        // text-shadow: 5px 5px 5px Indigo;
+        // box-shadow: 5px 5px 5px Indigo;
+        font-weight: Bold;
+    }
+
+    hr {
+        border-color: Black;
+        border-style: solid;
+        border-width: thick;
+        width: 100%;
+    }
+</style>
+
+<script language = "JavaScript">
+function Root2()
+{
+    rootValue1 = parseFloat(document.getElementById("squareRootValue1").value);
+
+    <!-- Formula of Square Root: √x or (x)^(1/2) or (x)^(.5) -->
+    resultRoot = Math.sqrt(rootValue1);
+    document.getElementById("squareRootResult").value = resultRoot;
+}
+
+
+
+
+function Exponent()
+{
+    base1 = parseFloat(document.getElementById("exponentialValue1").value);
+    exponent1 = parseFloat(document.getElementById("exponentialValue2").value);
+
+    <!-- Formula of Exponential: x^(n) -->
+    resultExponent = Math.pow(base1, exponent1);
+    document.getElementById("exponentialResult").value = resultExponent;
+}
+
+
+
+
+function Factorial()
+{
+    factorialNum = parseFloat(document.getElementById("nFactorialValue1").value);
+
+    <!-- Formula of n! Factorial: n * (n - 1) * (n - 2).... * 3 * 2 * 1 -->
+    if (factorialNum >= 0 && factorialNum <= 170)
+    {
+        factorialAnswer = 1;
+
+        for (n = 0; n < factorialNum; n++)
+        {
+            factorialAnswer = factorialAnswer * (factorialNum - n);
+        }
+        resultFactorial = factorialAnswer;
+        document.getElementById("nFactorialResult").value = resultFactorial;
+    }
+
+    else if (factorialNum > 170)
+    {
+        resultFactorial = "+Infinity";
+        document.getElementById("nFactorialResult").value = resultFactorial;
+    }
+
+    else if (factorialNum < 0 && factorialNum >= -170)
+    {
+        factorialAnswer = 1;
+        for (n = 0; n > factorialNum; n--)
+        {
+            factorialAnswer = factorialAnswer * (factorialNum - n);
+        }
+        resultFactorial = factorialAnswer;
+        document.getElementById("nFactorialResult").value = resultFactorial;
+    }
+
+    else if (factorialNum < -170)
+    {
+        resultFactorial = "-Infinity";
+        document.getElementById("nFactorialResult").value = resultFactorial;
+    }
+
+    else
+    {
+        resultFactorial = factorialNum;
+        document.getElementById("nFactorialResult").value = resultFactorial;
+    }
+}
+
+
+
+
+function OddEven()
+{
+    oddEvenNum = parseInt(document.getElementById("oddEvenValue1").value);
+    output = (oddEvenNum % 2);
+
+    if (output == 0)
+    {
+        resultOddEven = "Even Num!";
+        document.getElementById("oddEvenResult").value = resultOddEven;
+    }
+
+    else if (output == 1 || output == -1)
+    {
+        resultOddEven = "Odd Num!";
+        document.getElementById("oddEvenResult").value = resultOddEven;
+    }
+
+    else
+    {
+        resultOddEven = oddEvenNum;
+        document.getElementById("oddEvenResult").value = resultOddEven;
+    }
+}
+
+
+
+
+function CipherTools() {
+    valueA = document.getElementById("value1").value;
+    valueB = document.getElementById("value2").value;
+    valueC = document.getElementById("value3").value;
+
+    switch (valueC) {
+        case 'Ceasar Code':
+// Ceasar Code
+// Encryption:
+// e(x) = (x + k) (mod 26)
+
+// Decryption:
+// e(x) = (x - k) (mod 26)
+
+            collectString = "";
+            translate = {
+                'a': 0, 'b': 1, 'c': 2, 'd': 3, 'e': 4, 'f': 5,
+                'g': 6, 'h': 7, 'i': 8, 'j': 9, 'k': 10,
+                'l': 11, 'm': 12, 'n': 13, 'o': 14, 'p': 15,
+                'q': 16, 'r': 17, 's': 18, 't': 19, 'u': 20,
+                'v': 21, 'w': 22, 'x': 23, 'y': 24, 'z': 25
+            };
+
+            converted = [
+                'a', 'b', 'c', 'd', 'e',
+                'f', 'g', 'h', 'i', 'j',
+                'k', 'l', 'm', 'n', 'o',
+                'p', 'q', 'r', 's', 't',
+                'u', 'v', 'w', 'x', 'y', 'z'
+            ];
+
+            for (j = 0; j <= 25; j++) {
+                for (i = 1; i <= valueB.length; i++) {
+                    shift = j;
+                    messageCheck = valueB.substr((-1 + i), i).charAt(0);
+                    result = messageCheck.toLowerCase();
+
+                    switch (valueA) {
+                        case 'Encrypt':
+                            process = translate[result] + shift;
+                        break;
+
+                        case 'Decrypt':
+                            process = translate[result] - shift;
+                        break;
+
+                        default:
+                            process = null;
+                            document.getElementById("value4").value = process;
+                        break;
+                    }
+
+                    if (translate[result] != null) {
+                        if (process >= 26) {
+                            process = process - 26;
+                        }
+
+                        else if (process <= -1) {
+                            process = process + 26;
+                        }
+                    }
+
+                    else {
+                        converted[process] = messageCheck;
+                    }
+
+                    if (messageCheck == messageCheck.toUpperCase()) {
+                        converted[process] = converted[process].toUpperCase();
+                    }
+
+                    else if (messageCheck == messageCheck.toLowerCase()) {
+                        converted[process] = converted[process].toLowerCase();
+                    }
+                    collectString = collectString + "" + converted[process];
+                    document.getElementById("value4").value = "1) " + collectString;
+                }
+                collectString = collectString + "\n" + (j + 2) + ") ";
+            }
+            break;
+
+            case 'Morse Code':
+                switch (valueA) {
+                    case 'Encrypt':
+                        appendMessage = "";
+                        messageTranslate = {
+                            'A': "* - ", 'B': "- * * * ", 'C': "- * - * ", 'D': "- * * ", 'E': "* ", 'F': "* * - * ", 'G': "- - * ",
+                            'H': "* * * * ", 'I': "* * ", 'J': "* - - - ", 'K': "- * - ", 'L': "* - * * ", 'M': "- - ", 'N': "- * ",
+                            'O': "- - - ", 'P': "* - - * ", 'Q': "- - * - ", 'R': "* - * ", 'S': "* * * ", 'T': "- ", 'U': "* * - ",
+                            'V': "* * * - ", 'W': "* - - ", 'X': "- * * - ", 'Y': "- * - - ", 'Z': "- - * * ", ' ': "  "
+                        };
+
+                        for (i = 0; i <= (valueB.length - 1); i++) {
+                            message = messageTranslate[valueB[i].toUpperCase()];
+                            if (message != null) {
+                                message = message;
+                            }
+
+                            else {
+                                message = valueB[i].toUpperCase() + " ";
+                            }
+                            appendMessage = appendMessage + message;
+                        }
+                    break;
+
+                    case 'Decrypt':
+                        appendMessage = "Under Maintenance!";
+                    break;
+                }
+                // document.getElementById("value4").value = "Under Maintenance!";
+                document.getElementById("value4").value = appendMessage;
+            break;
+        }
+}
+</script>
+</head>
+<body>
+
+<h2 align = "center">All in One Calculator</h2>
+
+<form>
+Square Root:
+&radic;<input type = "text" size = "10" id = "squareRootValue1" placeholder = "Enter Value" required/> = <input type = "text" size = "10" id = "squareRootResult" placeholder = "Result" readonly/>
+<input type = "button" value = "Calculate" onclick = "Root2()"/>
+<input type = "reset" value = "Clear"/>
+</form>
+<noscript>Your browser does not support script languages. Please adjust the settings of your browser to run this feature.</noscript><br/>
+<br/>
+<br/>
+<form>
+Exponential Form:
+Base: <input type = "text" size = "10" id = "exponentialValue1" placeholder = "Enter Value" required/>
+Exponent: <input type = "text" size = "10" id = "exponentialValue2" placeholder = "Enter Value" required/>
+Answer: <input type = "text" size = "10" id = "exponentialResult" placeholder = "Result" readonly/>
+<input type = "button" value = "Calculate" onclick = "Exponent()"/>
+<input type = "reset" value = "Clear"/>
+</form>
+<noscript>Your browser does not support script languages. Please adjust the settings of your browser to run this feature.</noscript><br/>
+<br/>
+<br/>
+<form>
+n! Factorial:
+Number: <input type = "text" size = "10" id = "nFactorialValue1" placeholder = "Enter Value" required/>
+Factorial Number: <input type = "text" size = "10" id = "nFactorialResult" placeholder = "Result" readonly/>
+<input type = "button" value = "Calculate" onclick = "Factorial()"/>
+<input type = "reset" value = "Clear"/>
+</form>
+<noscript>Your browser does not support script languages. Please adjust the settings of your browser to run this feature.</noscript>
+<br/>
+<br/>
+<form>
+Odd and Even:
+Integer: <input type = "text" size = "10" id = "oddEvenValue1" placeholder = "Enter Value" required/>
+Result: <input type = "text" size = "10" id = "oddEvenResult" placeholder = "Result" readonly/>
+<input type = "button" value = "Calculate" onclick = "OddEven()"/>
+<input type = "reset" value = "Clear"/>
+</form>
+<noscript>Your browser does not support script languages. Please adjust the settings of your browser to run this feature.</noscript>
+
+
+
+
+
+
+
+
+<hr/>
+<h2 align = "center">Cryptography Tools</h2>
+<form>
+Message Type: <select name = "value1" id = "value1" required>
+<option></option>
+<option>Encrypt</option>
+<option>Decrypt</option>
+</select>
+<textarea name = "value2" id = "value2" noresize required></textarea>
+
+Convert Type: <select name = "value3" id = "value3">
+<option></option>
+<option>Ceasar Code</option>
+<option>Morse Code</option>
+</select>
+<textarea name = "value4" id = "value4" readonly noresize></textarea>
+<input type = "button" value = "Proceed" onclick = "CipherTools()"/>
+<input type = "reset"/>
+</form>
+<noscript>Your browser does not support script languages. Please adjust the settings of your browser to run this feature.</noscript>
+
+
+</body>
+</html>
